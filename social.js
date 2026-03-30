@@ -27,7 +27,7 @@ const titulos = {
     twitter: "Twitter / X"
 };
 
-// Evitar que el clic en el botón de la card active el modal
+
 document.querySelectorAll(".social-card a").forEach(a => {
     a.onclick = e => e.stopPropagation();
 });
@@ -42,14 +42,13 @@ document.querySelectorAll(".social-card").forEach(card => {
         $("modalName").textContent = info.nombre;
 
         const container = $("modalVideos");
-        container.innerHTML = ""; // Limpiar contenedor
+        container.innerHTML = "";
 
         modal.show();
 
-        // Renderizado según la red
         setTimeout(() => {
             if (red === "youtube") {
-                // Solo YouTube muestra videos incrustados
+                // Solo YouTube
                 container.innerHTML = info.videos.map(id => `
                     <div class="col-md-6 mb-3">
                         <div class="ratio ratio-16x9">
@@ -58,7 +57,7 @@ document.querySelectorAll(".social-card").forEach(card => {
                     </div>
                 `).join("");
             } else {
-                // TikTok y Twitter solo muestran un mensaje y botón de redirección
+                // TikTok y Twitter
                 container.innerHTML = `
                     <div class="col-12 py-4">
                         <p class="text-white-50">Visita mi perfil oficial para ver el contenido más reciente.</p>
@@ -71,7 +70,7 @@ document.querySelectorAll(".social-card").forEach(card => {
     };
 });
 
-// Limpiar modal al cerrar
+// Limpiar
 modalEl.addEventListener("hidden.bs.modal", () => {
     $("modalVideos").innerHTML = "";
 });

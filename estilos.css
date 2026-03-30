@@ -74,7 +74,7 @@ h2{font-weight:700; letter-spacing:.5px}
   border:1px solid rgba(255,255,255,0.05);
 }
 
-/* brillo animado */
+/* brillo */
 .social-card::before{
   content:"";
   position:absolute;
@@ -90,7 +90,7 @@ h2{font-weight:700; letter-spacing:.5px}
   inset:-20%;
 }
 
-/* hover */
+
 .social-card:hover{
   transform: translateY(-12px) scale(1.04);
   box-shadow:0 25px 60px rgba(0,0,0,.8);
@@ -187,7 +187,7 @@ iframe{
   box-shadow:0 15px 40px rgba(0,0,0,.7);
 }
 
-/* SCROLL SUAVE */
+/* SCROLL */
 html{
   scroll-behavior:smooth;
 }
