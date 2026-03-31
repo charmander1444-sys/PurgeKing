@@ -5,23 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PurgeKing | Redes</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Iconos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
     <nav class="navbar navbar-dark bg-black px-4 fixed-top sombra-nav">
         <span class="navbar-brand fw-bold fs-4">PurgeKing</span>
     </nav>
 
-    <!-- BANNER -->
     <section class="banner">
         <div class="overlay d-flex justify-content-center align-items-center">
             <div class="text-center text-white">
@@ -31,106 +25,117 @@
         </div>
     </section>
 
-    <!-- REDES -->
-    <section class="container text-center mt-5">
+    <section class="container-fluid px-4 px-md-5 text-center mt-5">
         <h2 class="mb-4">Redes Oficiales</h2>
 
         <div class="row g-4 justify-content-center">
-
-            <!-- YOUTUBE -->
             <div class="col-md-4">
-                <div class="card p-4 sombra-card social-card" data-red="youtube">
-                    <i class="bi bi-youtube display-3 text-danger"></i>
-                    <h4 class="mt-3 fw-bold fs-3 text-youtube">YOUTUBE</h4>
+                <div class="social-card social-youtube p-4" data-red="youtube">
+                    <i class="bi bi-youtube display-3"></i>
+                    <h4 class="mt-3 fw-bold">YOUTUBE</h4>
                     <p class="descripcion">Videos largos y contenido completo</p>
-
-                    <a href="https://www.youtube.com/@Purgeking-t2w" target="_blank" class="btn btn-youtube mt-3">
-                        Ir al canal
-                    </a>
+                    <a href="https://www.youtube.com/@Purgeking-t2w" target="_blank" class="btn-social">Ir al canal</a>
                 </div>
             </div>
 
-            <!-- TIKTOK -->
             <div class="col-md-4">
-                <div class="card p-4 sombra-card social-card" data-red="tiktok">
-                    <i class="bi bi-tiktok display-3 text-tiktok"></i>
-                    <h4 class="mt-3 fw-bold fs-3 text-tiktok">TIKTOK</h4>
+                <div class="social-card social-tiktok p-4" data-red="tiktok">
+                    <i class="bi bi-tiktok display-3"></i>
+                    <h4 class="mt-3 fw-bold">TIKTOK</h4>
                     <p class="descripcion">Contenido corto y viral</p>
-
-                    <a href="https://www.tiktok.com/@theepurgeking" target="_blank" class="btn btn-tiktok mt-3">
-                        Ir al canal
-                    </a>
+                    <a href="https://www.tiktok.com/@theepurgeking" target="_blank" class="btn-social">Ir al canal</a>
                 </div>
             </div>
 
-            <!-- TWITTER -->
             <div class="col-md-4">
-                <div class="card p-4 sombra-card social-card" data-red="twitter">
-                    <i class="bi bi-twitter-x display-3 text-twitter"></i>
-                    <h4 class="mt-3 fw-bold fs-3 text-twitter">TWITTER</h4>
+                <div class="social-card social-twitter p-4" data-red="twitter">
+                    <i class="bi bi-twitter-x display-3"></i>
+                    <h4 class="mt-3 fw-bold">TWITTER</h4>
                     <p class="descripcion">Noticias y comunidad</p>
+                    <a href="https://x.com/ThePurgeKing2" target="_blank" class="btn-social">Ir al canal</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <a href="#" class="btn btn-twitter mt-3">
-                        Ir al canal
+    <section class="container-fluid px-4 px-md-5 mt-5 mb-5">
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-8">
+                <h2 class="mb-4 text-center text-lg-start">El Discord</h2>
+                <div class="ratio ratio-16x9 shadow-lg" style="border-radius: 16px; overflow: hidden;">
+                    <iframe src="https://www.youtube.com/embed/-G_anWQRC9g" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <h2 class="mb-4 text-center text-lg-start">Únete al Discord</h2>
+                <div class="social-card social-discord p-4 text-center">
+                    <i class="bi bi-discord display-1"></i>
+                    <h4 class="mt-3 fw-bold">DISCORD</h4>
+                    <p class="descripcion">Únete a la comunidad de Re:Zero</p>
+                    <a href="https://discord.gg/qMsKdXhAX" target="_blank" class="btn-social">Entrar al Discord</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid px-4 px-md-5 mt-5 mb-5 text-center">
+        <h2 class="mb-4">Apoya a PURGEKING</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+
+                <div class="kofi-card p-5">
+
+                    <div class="kofi-icon mb-3">
+                        <i class="bi bi-cup-hot-fill"></i>
+                    </div>
+
+                    <h3 class="fw-bold mb-2">Tengo Hambreee</h3>
+                    <p class="descripcion">
+                        Doname pe pipo, no llego a fin de semana.
+                    </p>
+
+                    <a href="https://ko-fi.com/purgeking" target="_blank" class="btn-kofi mt-3">
+                        Apoyar en Ko-fi
                     </a>
+
                 </div>
+
             </div>
+        </div>
+    </section>
 
-            <!--MODAL -->
-            <div class="modal fade" id="socialModal" tabindex="-1">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content bg-dark text-white">
+    <div class="modal fade" id="socialModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-0" style="border-radius: 24px;">
 
-                        <div class="modal-header border-0">
-                            <h5 id="modalTitle"></h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                        </div>
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="modalTitle"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
 
-                        <div class="modal-body text-center">
+                <div class="modal-body text-center pt-0">
+                    <div class="mb-4">
+                        <img id="modalAvatar" src="" class="rounded-circle shadow-lg mb-3" width="100" height="100"
+                            style="object-fit: cover; border: 3px solid rgba(255,255,255,0.2);">
+                        <h3 id="modalName" class="fw-bold"></h3>
+                    </div>
 
-                            <!-- PERFIL -->
-                            <img id="modalAvatar" class="rounded-circle mb-3" width="120">
-                            <h4 id="modalName"></h4>
-
-                            <!-- VIDEOS -->
-                            <div class="row mt-4 g-3" id="modalVideos"></div>
-
-                        </div>
-
+                    <div class="row g-3" id="modalVideos">
                     </div>
                 </div>
+
             </div>
+        </div>
+    </div>
 
-            <section class="container mt-5">
-                <div class="row g-4 align-items-center">
-
-                    <div class="col-lg-7">
-                        <h2 class="mb-4 text-center text-lg-start">El discord</h2>
-                        <div class="ratio ratio-16x9 shadow-lg" style="border-radius: 16px; overflow: hidden;">
-                            <iframe src="https://www.youtube.com/embed/-G_anWQRC9g" title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5">
-                        <h2 class="mb-4 text-center text-lg-start">Únete al Discord</h2>
-                        <iframe src="https://discord.com/widget?id=1449485486942064772&theme=dark" width="100%" height="400"
-                            frameborder="0" style="border-radius:16px;">
-                        </iframe>
-                    </div>
-
-                    
-
-                </div>
-            </section>
-
-            <!-- JS -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="social.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="social.js"></script>
 </body>
 
 </html>

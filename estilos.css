@@ -4,12 +4,6 @@
   --card2:#1a2238;
   --txt:#ffffff;
   --gray:#9aa4b2;
-
-  --yt:#ff0033;
-  --tt:#00f2ea;
-  --tw:#1da1f2;
-
-  --glass: rgba(255,255,255,0.05);
 }
 
 /* BASE */
@@ -42,18 +36,6 @@ h2{font-weight:700; letter-spacing:.5px}
   position:absolute;
   inset:0;
   background:linear-gradient(180deg,#0006,#000f);
-  backdrop-filter: blur(2px);
-}
-
-.banner h1{
-  font-size:3rem;
-  animation: fadeUp 1s ease;
-}
-
-.banner p{
-  font-size:1.2rem;
-  opacity:.8;
-  animation: fadeUp 1.3s ease;
 }
 
 /* ANIMACIONES */
@@ -62,73 +44,99 @@ h2{font-weight:700; letter-spacing:.5px}
   to{opacity:1; transform:translateY(0)}
 }
 
-/* CARD */
+.banner h1{animation:fadeUp 1s ease}
+.banner p{animation:fadeUp 1.3s ease}
+
+/* ===== SISTEMA ===== */
+
+/* CARD BASE */
 .social-card{
   background: linear-gradient(145deg,var(--card),var(--card2));
   border-radius:20px;
-  cursor:pointer;
-  overflow:hidden;
+  padding:20px;
+  text-align:center;
   position:relative;
-  transition:.4s ease;
+  overflow:hidden;
+  transition:.4s;
   backdrop-filter: blur(10px);
   border:1px solid rgba(255,255,255,0.05);
 }
 
-/* brillo */
+/* glow dinámico */
 .social-card::before{
   content:"";
   position:absolute;
   inset:-50%;
-  background:linear-gradient(120deg,transparent,#ffffff22,transparent);
+  background:linear-gradient(120deg,transparent,var(--color),transparent);
   transform:rotate(25deg);
   opacity:0;
   transition:.6s;
 }
 
 .social-card:hover::before{
-  opacity:1;
+  opacity:.35;
   inset:-20%;
 }
 
-
+/* hover */
 .social-card:hover{
-  transform: translateY(-12px) scale(1.04);
+  transform:translateY(-10px) scale(1.03);
   box-shadow:0 25px 60px rgba(0,0,0,.8);
 }
 
-/* icono */
+/* ICONO */
 .social-card i{
+  font-size:3rem;
+  color:var(--color);
   transition:.4s;
 }
 
 .social-card:hover i{
-  transform: scale(1.3) rotate(6deg);
+  transform:scale(1.25) rotate(5deg);
 }
 
-/* BOTONES */
-.btn{
-  border:none;
+/* TITULO */
+.social-card h4{
+  margin-top:10px;
+  color:var(--color);
+}
+
+/* BOTÓN */
+.btn-social{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 22px;
   border-radius:12px;
   font-weight:bold;
+  color:#fff;
+  text-decoration:none;
+  background:linear-gradient(45deg,var(--color),var(--color2));
   transition:.3s;
+  position:relative;
+  overflow:hidden;
 }
 
-.btn:hover{
-  transform:scale(1.07);
-  filter:brightness(1.2);
+.btn-social::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent,#ffffff55,transparent);
+  opacity:0;
+  transition:.4s;
 }
 
-.btn-youtube{
-  background:linear-gradient(45deg,#ff0000,#ff4d4d);
+.btn-social:hover::before{opacity:1}
+
+.btn-social:hover{
+  transform:scale(1.08);
+  box-shadow:0 10px 25px var(--color);
 }
 
-.btn-tiktok{
-  background:linear-gradient(45deg,#00f2ea,#ff0050);
-}
-
-.btn-twitter{
-  background:linear-gradient(45deg,#1da1f2,#60c5ff);
-}
+/* COLORES POR RED */
+.social-youtube{ --color:#ff0033; --color2:#ff4d4d; }
+.social-tiktok{ --color:#00f2ea; --color2:#ff0050; }
+.social-twitter{ --color:#1da1f2; --color2:#60c5ff; }
+.social-discord{ --color:#5865F2; --color2:#8ea1ff; }
 
 /* MODAL */
 .modal-content{
@@ -144,7 +152,7 @@ h2{font-weight:700; letter-spacing:.5px}
   to{transform:scale(1); opacity:1}
 }
 
-/* avatar */
+/* AVATAR */
 #modalAvatar{
   border:3px solid rgba(255,255,255,0.1);
   transition:.4s;
@@ -154,7 +162,7 @@ h2{font-weight:700; letter-spacing:.5px}
   transform:scale(1.1) rotate(3deg);
 }
 
-/* videos */
+/* VIDEOS */
 #modalVideos iframe{
   border-radius:14px;
   transition:.3s;
@@ -166,16 +174,6 @@ h2{font-weight:700; letter-spacing:.5px}
 }
 
 /* TEXTO */
-.text-youtube{color:var(--yt)}
-
-.text-tiktok{
-  background:linear-gradient(45deg,#00f2ea,#ffffff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.text-twitter{color:var(--tw)}
-
 .descripcion{
   color:#cbd5e1;
   font-size:.95rem;
@@ -188,12 +186,100 @@ iframe{
 }
 
 /* SCROLL */
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 /* RESPONSIVE */
 @media(max-width:768px){
   .banner{height:260px}
   .banner h1{font-size:2rem}
+}
+
+.container-fluid {
+    max-width: 1600px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.social-card {
+    width: 100%;
+}
+
+/* Ajuste de margen */
+section:last-of-type {
+    padding-bottom: 50px;
+}
+
+/* ===== KO-FI CARD ===== */
+.kofi-card{
+  background: linear-gradient(145deg,#1a0f1f,#2a1633);
+  border-radius:25px;
+  position:relative;
+  overflow:hidden;
+  transition:.4s;
+  border:1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+}
+
+/* glow animado */
+.kofi-card::before{
+  content:"";
+  position:absolute;
+  inset:-60%;
+  background:linear-gradient(120deg,transparent,#ff5f9e,transparent);
+  transform:rotate(25deg);
+  opacity:0;
+  transition:.6s;
+}
+
+.kofi-card:hover::before{
+  opacity:.4;
+  inset:-20%;
+}
+
+/* hover */
+.kofi-card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 25px 60px rgba(255,0,120,.4);
+}
+
+/* icono */
+.kofi-icon i{
+  font-size:3.5rem;
+  color:#ff5f9e;
+  transition:.4s;
+}
+
+.kofi-card:hover .kofi-icon i{
+  transform:scale(1.2) rotate(-5deg);
+}
+
+/* botón */
+.btn-kofi{
+  display:inline-block;
+  padding:12px 28px;
+  border-radius:14px;
+  font-weight:bold;
+  text-decoration:none;
+  color:white;
+  background:linear-gradient(45deg,#ff5f9e,#ff9966);
+  transition:.3s;
+  position:relative;
+  overflow:hidden;
+}
+
+.btn-kofi::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent,#ffffff55,transparent);
+  opacity:0;
+  transition:.4s;
+}
+
+.btn-kofi:hover::before{opacity:1}
+
+.btn-kofi:hover{
+  transform:scale(1.08);
+  box-shadow:0 10px 30px #ff5f9e;
 }
